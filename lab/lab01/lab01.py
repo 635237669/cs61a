@@ -11,6 +11,11 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
+    a=1
+    while(k>0):
+        a=a*(n-k+1)
+        k=k-1
+    return a
 
 
 def divisible_by_k(n, k):
@@ -34,6 +39,14 @@ def divisible_by_k(n, k):
     0
     """
     "*** YOUR CODE HERE ***"
+    a=0
+    b=0
+    while(a+k<=n):
+        a=a+k
+        print (a)
+        b=b+1
+    return b
+    
 
 
 def sum_digits(y):
@@ -50,7 +63,8 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
-
+    for digit in str(y):
+        return sum(int(digit) )
 
 def double_eights(n):
     """Return true if n has two eights in a row.
@@ -68,4 +82,8 @@ def double_eights(n):
     False
     """
     "*** YOUR CODE HERE ***"
+    n_str = str(n)  # 将数字 n 转换为字符串
+    return '88' in n_str  # 检查字符串中是否有连续的 '88'
+    
+
 
